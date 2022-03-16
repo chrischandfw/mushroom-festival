@@ -71,14 +71,24 @@ function displayFriends() {
         //             increment the friends satisfaction and decrement your mushrooms
 
         //             then display your friends and mushrooms with the updated state
+		friendEl.addEventListener('click', () => {
 
+			if (mushroomCount === 0) {
+				alert('Go Get Em!');
+			} else if {friend.satisfaction < 3 && mushroomCount > 0}
+
+
+			displayFriends();
+			displayMushrooms();
+		})
         // append the friendEl to the friends list in DOM
+		friendsEl.append(friendEl);
     }
 }
 
 function displayMushrooms() {
     // clear out the mushroom div
-
+mushroomsEl.textContent = '';
     for (let i = 0; i < mushroomCount; i++) {
         // for each mushroom in your mushroom state, render and append a mushroom
     }
