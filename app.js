@@ -75,8 +75,10 @@ function displayFriends() {
 
             if (mushroomCount === 0) {
                 alert('Go Get Em!');
-            } 
-
+            } else if (mushroomCount > 0 && friend.selection < 3) {
+                friend.selection++;
+                mushroomCount--;
+            }
 
             displayFriends();
             displayMushrooms();
