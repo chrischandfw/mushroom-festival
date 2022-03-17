@@ -45,8 +45,8 @@ addFriendButton.addEventListener('click', () => {
     friendInputEl.textContent = '';
     // create a new friend object
     const addFriend = {
-        name: friendInputEl.value || 'default',
-        satisfaction: Math.ceil(Math.random() * 3),
+        name: friendInputEl.value || 'homie',
+        satisfaction: Math.ceil(Math.random() * 2git ),
     };
     // push it into the friends state array, passed in as an argument
     friendData.push(addFriend);
@@ -75,8 +75,8 @@ function displayFriends() {
 
             if (mushroomCount === 0) {
                 alert('Go Get Em!');
-            } else if (mushroomCount > 0 && friend.selection < 3) {
-                friend.selection++;
+            } else if (mushroomCount > 0 && friend.satisfaction < 3) {
+                friend.satisfaction++;
                 mushroomCount--;
             }
 
@@ -94,8 +94,7 @@ function displayMushrooms() {
     for (let i = 0; i < mushroomCount; i++) {
         // for each mushroom in your mushroom state, render and append a mushroom
         const mushEL = renderMushroom();
-        mushEL.classList.add('mushroom');
-        mushroomsEl.append();
+        mushroomsEl.append(mushEL);
     }
 }
 
